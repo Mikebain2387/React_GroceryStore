@@ -7,6 +7,15 @@ const [cart, setCart]=useState([]);
 const [currentPage, setCurrentPage] = useState('products');
 
 
+let content;
+if(currentPage ==='products'){
+ content = <ProductList products={products} addToCart={addToCart} />;
+}
+else if(currentPage === 'cart'{
+ content = <{ProductList products = {products}}
+})
+
+
  return(
   <div className="container">
    <nav className="navbar">
@@ -16,9 +25,13 @@ const [currentPage, setCurrentPage] = useState('products');
       <li className="nav-item">
        <button className="btn btn-link nav-link" onClick={()=> setCurrentPage('products')}>Products</button>
       </li>
+      <li className="nav-item">
+       <button className="btn btn-link nav-link" onClick={() =>setCurrentPage('cart')}>CArt ({cart.reduce((total,item) => total + item.quantiny, 0)})</button>
+      </li>
      </ul>
     </div>
    </nav>
+   {content}
   </div>
  )
 }
