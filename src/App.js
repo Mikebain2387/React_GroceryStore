@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import products from './components/data';
 import ProductList from './components/ProductList';
+import Cart from './components/cart'
 
 function App(){
 const [cart, setCart]=useState([]);
@@ -11,9 +12,14 @@ let content;
 if(currentPage ==='products'){
  content = <ProductList products={products} addToCart={addToCart} />;
 }
-else if(currentPage === 'cart'{
- content = <{ProductList products = {products}}
-})
+else if (currentPage === 'cart'){
+
+ content = <Cart cart={cart} updateCart={setCart} checkout ={() => setCurrentPage('checkout')}/>;
+}
+
+else if(currentPage === 'checkout') {
+ content = <Checkout/>;
+}
 
 
  return(

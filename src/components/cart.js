@@ -32,6 +32,7 @@ const Cart =({cart, updateCart, checkout}) => {
        <th>Actions</th>
       </tr>
      </thead>
+
     </table>
    )}
   </div>
@@ -39,3 +40,5 @@ const Cart =({cart, updateCart, checkout}) => {
 
 
 }
+
+export default Cart;
