@@ -1,7 +1,12 @@
 import React, {useState} from 'react';
-import Products from './components/data'
+import products from './components/data';
+import ProductList from './components/ProductList';
 
 function App(){
+const [cart, setCart]=useState([]);
+const [currentPage, setCurrentPage] = useState('products');
+
+
  return(
   <div className="container">
    <nav className="navbar">
