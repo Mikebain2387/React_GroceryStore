@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import Products from './components/data'
 
 function App(){
  return(
