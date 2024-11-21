@@ -7,16 +7,22 @@ import './styles.css'
 
 function App(){
 const [cart, setCart]=useState([]);
+//track current page
 const [currentPage, setCurrentPage] = useState('products');
 
 
 const addToCart = (product) => {
  setCart((prevCart) => {
+
   const itemExists = prevCart.find ((item) => item.id === product.id);
   if(itemExists) {
+
    return prevCart.map((item) => item.id === product.id ? {...item, quantity: item.quantity + 1} : item 
   );
    
+  }
+  else {
+   return[...prevCart, {...product, quantity: 1}];
   }
  }
  );
@@ -25,6 +31,7 @@ const addToCart = (product) => {
 
 
 let content;
+
 if(currentPage ==='products'){
  content = <ProductList products={products} addToCart={addToCart} />;
 }
@@ -48,7 +55,7 @@ else if(currentPage === 'checkout') {
        <button className="btn btn-link nav-link" onClick={()=> setCurrentPage('products')}>Products</button>
       </li>
       <li className="nav-item">
-       <button className="btn btn-link nav-link" onClick={() =>setCurrentPage('cart')}>CArt ({cart.reduce((total,item) => total + item.quantiny, 0)})</button>
+       <button className="btn btn-link nav-link" onClick={() =>setCurrentPage('cart')}>Cart ({cart.reduce((total,item) => total + item.quantiny, 0)})</button>
       </li>
      </ul>
     </div>
