@@ -5,13 +5,30 @@ body{
 
 .navbar{
  margin-bottom: 20px;
-
+background: rgb(2, 29, 56);
 }
 
 .product-card {
-padding: 5px;
-margin-bottom: 20px;
+
 border: 1px solid rgb(255, 255, 255);
+}
+
+.product-card .card-body{
+ flex-grow: 1;
+}
+
+.product-card h5{
+ font-size: 1.2rem;
+ margin-bottom: 10px;
+}
+
+.product-card button{
+ align-self: center;
+ margin-top: auto;
+}
+
+.row{
+ row-gap: 20px;
 }
 
 
@@ -21,6 +38,6 @@ border: 1px solid rgb(255, 255, 255);
 }
 
 .checkout{
- 
+
 }
 
