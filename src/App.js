@@ -3,9 +3,25 @@ import products from './components/data';
 import ProductList from './components/ProductList';
 import Cart from './components/cart'
 
+import './styles.css'
+
 function App(){
 const [cart, setCart]=useState([]);
 const [currentPage, setCurrentPage] = useState('products');
+
+
+const addToCart = (product) => {
+ setCart((prevCart) => {
+  const itemExists = prevCart.find ((item) => item.id === product.id);
+  if(itemExists) {
+   return prevCart.map((item) => item.id === product.id ? {...item, quantity: item.quantity + 1} : item 
+  );
+   
+  }
+ }
+ );
+};
+
 
 
 let content;
