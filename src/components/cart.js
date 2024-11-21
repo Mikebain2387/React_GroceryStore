@@ -32,7 +32,18 @@ const Cart =({cart, updateCart, checkout}) => {
        <th>Actions</th>
       </tr>
      </thead>
+      <tbody>
+       {cart.map((item) =>(
+        <tr key={item.id}>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
 
+         <button className="btn btn-sm btn-success me-1"></button>
+        </tr>
+       ))}
+      </tbody>
     </table>
    )}
   </div>
