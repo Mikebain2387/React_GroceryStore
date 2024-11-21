@@ -7,7 +7,7 @@ const Cart =({cart, updateCart, checkout}) => {
   updateCart((prevCart) => prevCart.filter((item) => item.id !==id));
  };
 
- const handleAddONe = (id) =>{
+ const handleAddOne = (id) =>{
   updateCart((prevCart) => prevCart.map((item) => (item.id === id ? {...item, quantity: item.quantity + 1} : item))
  );
  };
@@ -35,17 +35,33 @@ const Cart =({cart, updateCart, checkout}) => {
       <tbody>
        {cart.map((item) =>(
         <tr key={item.id}>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
+         
+         <td>{item.name} </td>
+         <td>{item.quantity} </td>
+         <td>${(item.price * item.quantity).toFixed(2)} </td>
 
-         <button className="btn btn-sm btn-success me-1"></button>
+         <button onClick={()=> handleAddOne(item.id) } className="btn btn-sm btn-success me-1">
+           +
+         </button>
+
+         <button onClick={()=> handleRemoveOne(item.id) } className="btn btn-sm btn-warning me-1">
+           -
+         </button>
+
+         <button onClick={()=> handleRemove(item.id) } className="btn btn-sm btn-danger me-1">
+           Delete
+         </button>
+
         </tr>
        ))}
       </tbody>
     </table>
    )}
+   <p>
+    <strong>Subtotal:</strong>
+    ${subtotal.toFixed(2)}
+    </p>
+    <button className="btn btn-primary" onClick={checkout} disabled={cart.length===0} >Checkout</button>
   </div>
  )
 
