@@ -23,7 +23,7 @@ border: 1px solid rgb(255, 255, 255);
 }
 
 .product-card button{
- align-self: center;
+ align-self: self-start;
  margin-top: auto;
 }
 

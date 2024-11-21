@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import products from './components/data';
 import ProductList from './components/ProductList';
 import Cart from './components/cart'
-
+import Checkout from './components/Checkout';
 import './styles.css'
 
 function App(){
