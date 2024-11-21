@@ -1,0 +1,26 @@
+body{
+ background-color: rgb(248, 249, 250);
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+ margin-bottom: 20px;
+
+}
+
+.product-card {
+padding: 5px;
+margin-bottom: 20px;
+border: 1px solid rgb(255, 255, 255);
+}
+
+
+.cart{
+ padding: 10px;
+ background:rgb(245, 245, 245);
+}
+
+.checkout{
+ 
+}
+
