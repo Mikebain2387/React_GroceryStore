@@ -23,7 +23,7 @@ const Cart =({cart, updateCart, checkout}) => {
    {cart.length ===0 ? (
     <p>Your cart is empty</p>
    ): (
-    <table className="table">
+    <table className="table cart-table">
      <thead>
       <tr>
        <th>Item</th>
