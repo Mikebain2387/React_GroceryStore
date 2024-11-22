@@ -1,16 +1,41 @@
+body, html{
+ background: url(../src/images/backgroundimage.webp);
+ background-size: cover;
+  background-position: center;
+}
+
+
 body{
- background-color: rgb(248, 249, 250);
+ 
+ /*background-color: rgb(248, 249, 250);*/
  font-family: Arial, Helvetica, sans-serif;
+ padding: 150px 0 50px 0;
 }
 
 .navbar{
  margin-bottom: 20px;
-background: rgb(2, 29, 56);
+background: rgba(2, 29, 56, 0.989);
+height: 100px;
+display: flex;
+align-items: center;
+padding: 0 1rem;
+
+}
+
+.navbar.fixed-top{
+ box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+z-index: 100;
+}
+
+.navbar a{
+ 
 }
 
 .product-card {
-
-border: 1px solid rgb(255, 255, 255);
+ color: whitesmoke;
+ text-shadow: 2px 2px 5px black;
+background: rgba(145, 145, 147, 0.486);
+/*border: 1px solid rgb(255, 255, 255);*/
 }
 
 .product-card .card-body{
@@ -25,6 +50,8 @@ border: 1px solid rgb(255, 255, 255);
 .product-card button{
  align-self: self-start;
  margin-top: auto;
+ color: rgb(247, 242, 242);
+ text-shadow: 1px 1px 5px rgb(93, 91, 91);
 }
 
 .row{
@@ -38,6 +65,7 @@ border: 1px solid rgb(255, 255, 255);
 }
 
 .checkout{
-
+text-align: center;
+margin-top: 50px;
 }
 

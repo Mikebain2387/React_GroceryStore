@@ -51,7 +51,7 @@ else if(currentPage === 'checkout') {
 
  return(
   <div className="container">
-   <nav className="navbar navbar-expand-lg navbar-dark">
+   <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
     <div className="container-fluid">
      <a className='navbar-brand' href="#">Bain's Fresh Market</a>
      <ul className="navbar-nav ms-auto">
