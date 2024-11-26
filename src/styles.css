@@ -15,12 +15,25 @@ body, html{
 
 .navbar{
  margin-bottom: 20px;
-background: rgba(2, 29, 56, 0.989);
+ background: rgb(7, 81, 126);
 height: 100px;
 display: flex;
 align-items: center;
 padding: 0 1rem;
+border: 2px solid whitesmoke;
 
+}
+
+.navbar-brand{text-shadow: 2px 2px 3px black;
+ color: whitesmoke;
+
+ font-size: 1.5rem;
+}
+
+@media (min-width: 768px){
+ .navbar-brand{
+  font-size: 2.5rem;
+ }
 }
 
 .navbar.fixed-top{
@@ -33,7 +46,7 @@ z-index: 100;
 .product-card {
  color: rgb(248, 247, 247);
  text-shadow: 2px 2px 5px rgb(16, 16, 16);
-background: rgba(72, 72, 74, 0.689);
+background: rgba(72, 72, 72, 0.849);
 
 }
 
@@ -66,7 +79,7 @@ background: rgba(72, 72, 74, 0.689);
 
 .cart{
  padding: 10px;
- background:rgba(245, 245, 245, 0.699);
+ background:rgba(186, 186, 186, 0.699);
  border-radius: 15px;
  font-size: 20px;
  
@@ -88,8 +101,8 @@ background: rgba(72, 72, 74, 0.689);
 .cart h2, p{
  font-weight: bolder;
  letter-spacing: 1px;
- color: rgb(15, 15, 15);
- text-shadow: 2px 2px 5px rgb(241, 238, 238);
+ color: rgb(254, 251, 251);
+ text-shadow: 2px 2px 5px rgb(15, 14, 14);
 }
 
 
