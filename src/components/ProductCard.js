@@ -6,6 +6,7 @@ const ProductCard =({product, addToCart}) =>{
  return(
   <div className="product-card card h-100 ">
    <div className="card-body d-flex flex-column justify-content-between">
+    <img className='img-fluid' id={product.id} src={product.image} alt="" />
     <h5 className="card-title">{product.name}</h5>
     <p className="card-text">{product.description}
     </p>
