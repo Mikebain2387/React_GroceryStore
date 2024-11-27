@@ -55,10 +55,10 @@ else if(currentPage === 'checkout') {
     <div className="container-fluid">
      <a className='navbar-brand' href="#">Bain's Fresh Market</a>
      <ul className="navbar-nav ms-auto">
-      <li className="nav-item">
+      <li className="nav-item link">
        <button className="btn btn-link nav-link" onClick={()=> setCurrentPage('products')}>Products</button>
       </li>
-      <li className="nav-item">
+      <li className="nav-item link">
        <button className="btn btn-link nav-link" onClick={() =>setCurrentPage('cart')}>Cart ({cart.reduce((total,item) => total + item.quantity, 0)})</button>
       </li>
      </ul>

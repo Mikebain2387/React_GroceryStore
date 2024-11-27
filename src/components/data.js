@@ -1,4 +1,4 @@
-import apple from "../images/apple_original-removebg-preview.png"
+import apple from "../images/apples-805124_1920-removebg-preview.png"
 import bread from "../images/bread_original-removebg-preview.png"
 import milk from "../images/milk-2688466_1280-removebg-preview.png"
 import eggs from "../images/eggs_original-removebg-preview.png"
