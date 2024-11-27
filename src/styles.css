@@ -15,36 +15,34 @@ body, html{
 
 .navbar{
 
-  background: url(../src/images/farmBG.jpg);
+  background: url(../src/images/navBarImage.webp);
   background-size: cover;
-   background-position: center -650px;
+   background-position: center ;
    background-attachment: fixed;
    background-repeat: no-repeat;
+   
+   
  margin-bottom: 20px;
 height: 150px;
 display: flex;
 align-items: center;
 padding: 0 1rem;
-border: 2px solid whitesmoke;
+border: 2px solid rgba(245, 245, 245, 0.219);
 
 }
 
-@media screen and (max-width: 768px) { /* For smaller screens */
-  .navbar {
-    background-position: center -550px; /* Keep the same portion visible */
-    height: 120px; /*  Adjust the navbar height for smaller screens */
-  }
-}
 
-.navbar-brand{text-shadow: 2px 2px 3px black;
- color: whitesmoke;
 
- font-size: 1.5rem;
+.navbar-brand{
+text-shadow: 3px 3px 1px black;
+color: rgb(214, 211, 211);
+font-weight: bold;
+font-size: 1.5rem!important;
 }
 
 @media (min-width: 768px){
  .navbar-brand{
-  font-size: 2.5rem;
+  font-size: 5.5rem !important;
  }
 }
 

@@ -21,7 +21,7 @@ const Cart =({cart, updateCart, checkout}) => {
   <div className="cart">
    <h2>Your Cart</h2>
    {cart.length ===0 ? (
-    <p className="checkout-message">Your cart is empty</p>
+    <p>Your cart is empty</p>
    ): (
     <table className="table cart-table">
      <thead>
@@ -58,7 +58,7 @@ const Cart =({cart, updateCart, checkout}) => {
     </table>
    )}
    <p>
-    <strong>Subtotal:</strong>
+    <strong>Subtotal: </strong>
     ${subtotal.toFixed(2)}
     </p>
     <button className="btn btn-primary" onClick={checkout} disabled={cart.length===0} >Checkout</button>
