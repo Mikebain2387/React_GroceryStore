@@ -45,12 +45,20 @@ const [currentPage, setCurrentPage] = useState('products');
 //fetch data from API 
 useEffect(()=> {
  fetch('http://localhost:4001/api/items')
- .then((res) => res.json())
+ .then((res) => {
+  if (!res.ok){
+   throw new Error(`HTTP error! status : ${res.status}`);
+  }
+  return res.json();
+ } 
+)
  .then((data) => {
+  console.log('Fetched data:', data)
   const updatedData = data.map((product) =>({
-   ...product, image: imageMap[product.name],
+   ...product,
+    image: imageMap[product.name],
 
-  }))
+  }));
   setProducts(updatedData);
  })
  .catch((err) => console.error('FAiled to fetch products:', err));
